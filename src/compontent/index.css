@@ -1,0 +1,8 @@
+.menuList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    width: 200px;
+    height: 100vh;
+}

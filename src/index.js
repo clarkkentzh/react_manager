@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Apps from './App';
 import * as serviceWorker from './serviceWorker';
+
+import Dva from './models/dva'
+import models from './models'
+
+const app = Dva({
+  initialState: {},
+  models: models,
+  onError(e) {
+    console.log('onError', e)
+  },
+})
+const App = app.start(<Apps/>)
 
 ReactDOM.render(
   <React.StrictMode>
