@@ -1,0 +1,52 @@
+.container_intelligent{
+  width: calc(100vw - 200px);
+  height: calc(100vh - 80px);
+  margin-left: 200px;
+  padding: 30px 20px;
+}
+.tabs{
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #333333;
+  cursor: pointer;
+}
+.tabs_select{
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #3F6AD2;
+  border-bottom:2px solid #3F6AD2;
+  cursor: pointer;
+}
+.intelligent_table{
+  background-color: #ffffff;
+}
+.intelligent_title{
+  font-size: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intelligent_toprow{
+  height: 60px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toprow_right{
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

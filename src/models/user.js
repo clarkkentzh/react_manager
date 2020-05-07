@@ -1,17 +1,22 @@
 
 import userApi from '../apis/userApi'
+import {setToken} from '../utils/token'
 export default {
     namespace: 'user',
     state: {
-        personInfo: [],
+        userInfo: [],
     },
     effects: {
-        // *getAppTypeDict({ payload }, { call, put }) {
-        //     const response = yield call( personApi.getDict, payload);
-        //     if(response.code == 200){
-        //         yield put({ type: 'changeType', payload: { appTypeDict: response.result } });
-        //     }
-        // },
+        *login({ payload,callback }, { call, put }) {
+            const response = yield call( userApi.login, payload);
+            if(response.code == 200){
+                setToken(response.result.token)
+                yield put({ type: 'changeType', payload: { userInfo: response.result.userInfo,departsInfo:  response.result.departs} });
+                if(callback){
+                    callback()
+                }
+            }
+        },
     },
     reducers: {
         changeType(state, action) {

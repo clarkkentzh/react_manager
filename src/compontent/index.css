@@ -1,8 +1,41 @@
+.ant-menu-item-selected{
+    background-color: #ffffff !important;
+}
+
+.imgCode{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ant-menu-item{
+    text-align: left;
+}
+.ant-menu-item-selected > .anticon,.ant-menu-item-selected > span{
+    color: #3F6AD2 !important
+}
+
 .menuList {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: blue;
+    background-color: #3F6AD2;
     width: 200px;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.App-header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }

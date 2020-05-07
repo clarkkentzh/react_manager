@@ -1,0 +1,12 @@
+.container_speech{
+  width: calc(100vw - 200px);
+  height: calc(100vh - 80px);
+  margin-left: 200px;
+  padding: 30px 20px;
+}
+.speech_titleright{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

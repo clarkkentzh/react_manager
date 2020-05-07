@@ -5,17 +5,17 @@ import {
 } from '../utils/token'
 
 const service = axios.create({
-  baseURL: 'http://172.16.77.103:8082/basic-platform',
+  baseURL: 'http://192.168.85.51:8080/robot-platform',
 
   timeout: 30000
 });
 
 service.interceptors.request.use(
   config => {
-    // let token = getToken();
-    // if (token) {
-    //   config.headers['token'] = getToken()
-    // }
+    let token = getToken();
+    if (token) {
+      config.headers['X-Access-Token'] = getToken()
+    }
     config.headers['Content-Type'] = 'application/json; charset=utf-8'
     // 设置请求的语言
     config.headers['locale'] = 'zh_CN'
